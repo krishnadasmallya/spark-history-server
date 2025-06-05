@@ -10,14 +10,24 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jdk.version>1.8</jdk.version>
+        <maven.compiler.release>17</maven.compiler.release>
         <hadoop.version>3.4.1</hadoop.version>
         <awssdk.version>1.12.783</awssdk.version>
         <httpclient.version>4.5.13</httpclient.version>
         <jackson.version>2.10.5</jackson.version>
         <jackson.databind.version>2.12.7.1</jackson.databind.version>
     </properties>
-
+    <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <version>3.11.0</version>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+    </build>
     <dependencyManagement>
         <dependencies>
             <dependency>
